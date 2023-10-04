@@ -1,0 +1,24 @@
+{
+  "name": "devweb-tp6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "http-dev": "cross-env NODE_ENV=development nodemon server.mjs",
+    "http-prod": "cross-env NODE_ENV=production node server.mjs"
+  },
+  "keywords": [
+    "KEYS"
+  ],
+  "author": "KEYS",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

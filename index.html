@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Reduce 2000</title>
+</head>
+
+<body>
+    <h1>REDUCE 2000</h1>
+    <div >
+        <div></div>
+    
+        <div class="form-URL">
+        <label for="name">Enter your URL : </label>
+        <input  type="text" name="saisi" id="url" value="" required />
+        <button onclick="include()" id="button">Reductor!</button>
+        </div>
+        
+        </div>
+        <p class="body-2" id="outpout"></p>
+    </div>
+    <script>
+        const $intput = document.querySelector("input");
+        const $goButton = document.getElementById("button");
+        const $outpout = document.getElementById("outpout");
+        function reduceHTML(){
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < 5; i++)
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return text;
+        }
+
+        function include(){
+            fetch('/api');
+            let  newurl=reduceHTML()
+            console.log($intput.value)
+            $outpout.innerHTML += `<a href="${document.getElementById("url").value}" target="_blank">https://reduce2000.com/${newurl}</a><br />`
+        }
+        
+    </script>
+    
+</body>
+</html>
